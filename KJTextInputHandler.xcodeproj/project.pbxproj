@@ -15,6 +15,9 @@
 		8D273DE51E7CA29F003FBB90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D273DE31E7CA29F003FBB90 /* LaunchScreen.storyboard */; };
 		8D273DF01E7CA29F003FBB90 /* KJTextInputHandlerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D273DEF1E7CA29F003FBB90 /* KJTextInputHandlerTests.m */; };
 		8D273DFB1E7CA29F003FBB90 /* KJTextInputHandlerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D273DFA1E7CA29F003FBB90 /* KJTextInputHandlerUITests.m */; };
+		8D273E0D1E7CA2E4003FBB90 /* UITextView+KJInputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D273E0A1E7CA2E4003FBB90 /* UITextView+KJInputHandler.m */; };
+		8D273E0E1E7CA2E4003FBB90 /* KJInputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D273E0C1E7CA2E4003FBB90 /* KJInputHandler.m */; };
+		8D273E111E7CBAD3003FBB90 /* UITextField+KJInputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D273E101E7CBAD3003FBB90 /* UITextField+KJInputHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		8D273DF61E7CA29F003FBB90 /* KJTextInputHandlerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KJTextInputHandlerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D273DFA1E7CA29F003FBB90 /* KJTextInputHandlerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJTextInputHandlerUITests.m; sourceTree = "<group>"; };
 		8D273DFC1E7CA29F003FBB90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D273E091E7CA2E4003FBB90 /* UITextView+KJInputHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+KJInputHandler.h"; sourceTree = "<group>"; };
+		8D273E0A1E7CA2E4003FBB90 /* UITextView+KJInputHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+KJInputHandler.m"; sourceTree = "<group>"; };
+		8D273E0B1E7CA2E4003FBB90 /* KJInputHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJInputHandler.h; sourceTree = "<group>"; };
+		8D273E0C1E7CA2E4003FBB90 /* KJInputHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJInputHandler.m; sourceTree = "<group>"; };
+		8D273E0F1E7CBAD3003FBB90 /* UITextField+KJInputHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+KJInputHandler.h"; sourceTree = "<group>"; };
+		8D273E101E7CBAD3003FBB90 /* UITextField+KJInputHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+KJInputHandler.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +110,7 @@
 		8D273DD41E7CA29F003FBB90 /* KJTextInputHandler */ = {
 			isa = PBXGroup;
 			children = (
+				8D273E081E7CA2DD003FBB90 /* KJTextInputHander */,
 				8D273DD81E7CA29F003FBB90 /* AppDelegate.h */,
 				8D273DD91E7CA29F003FBB90 /* AppDelegate.m */,
 				8D273DDB1E7CA29F003FBB90 /* ViewController.h */,
@@ -138,6 +148,19 @@
 				8D273DFC1E7CA29F003FBB90 /* Info.plist */,
 			);
 			path = KJTextInputHandlerUITests;
+			sourceTree = "<group>";
+		};
+		8D273E081E7CA2DD003FBB90 /* KJTextInputHander */ = {
+			isa = PBXGroup;
+			children = (
+				8D273E0F1E7CBAD3003FBB90 /* UITextField+KJInputHandler.h */,
+				8D273E101E7CBAD3003FBB90 /* UITextField+KJInputHandler.m */,
+				8D273E091E7CA2E4003FBB90 /* UITextView+KJInputHandler.h */,
+				8D273E0A1E7CA2E4003FBB90 /* UITextView+KJInputHandler.m */,
+				8D273E0B1E7CA2E4003FBB90 /* KJInputHandler.h */,
+				8D273E0C1E7CA2E4003FBB90 /* KJInputHandler.m */,
+			);
+			path = KJTextInputHander;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +230,7 @@
 				TargetAttributes = {
 					8D273DD11E7CA29F003FBB90 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = LLKYVL766D;
 						ProvisioningStyle = Automatic;
 					};
 					8D273DEA1E7CA29F003FBB90 = {
@@ -273,8 +297,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D273E111E7CBAD3003FBB90 /* UITextField+KJInputHandler.m in Sources */,
 				8D273DDD1E7CA29F003FBB90 /* ViewController.m in Sources */,
 				8D273DDA1E7CA29F003FBB90 /* AppDelegate.m in Sources */,
+				8D273E0E1E7CA2E4003FBB90 /* KJInputHandler.m in Sources */,
+				8D273E0D1E7CA2E4003FBB90 /* UITextView+KJInputHandler.m in Sources */,
 				8D273DD71E7CA29F003FBB90 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,9 +451,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LLKYVL766D;
 				INFOPLIST_FILE = KJTextInputHandler/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yilidibkd.com.KJTextInputHandler;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yldbkd.www.buyer.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -435,9 +463,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LLKYVL766D;
 				INFOPLIST_FILE = KJTextInputHandler/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yilidibkd.com.KJTextInputHandler;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yldbkd.www.buyer.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
