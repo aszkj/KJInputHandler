@@ -5,6 +5,7 @@
 使用方法如下，比如我要给UITextView限制只能输入中文和英文
 #import "UITextView+KJInputHandler.h"
 
+
 @property (weak, nonatomic) IBOutlet UITextView *testTextView;
 self.testTextView.inputRule = Input_Only_ChineseEnglish;
 
