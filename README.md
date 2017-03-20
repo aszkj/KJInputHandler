@@ -1,26 +1,21 @@
-# KJInputHandler
-# In the actual project, we often met many places to input,
-# such as the input of username, the input of search, the input of adress detail
-# In these scenarios, we usually don't allowd input emotions and special characters,We usually practice is everywhere to implete
-# delegate for the UITextfiled or UITextView,this can make it,but there are too many places to implete the delegate for your project
-# because there are too many places need to input in your project
-# so inorder to make it easier to solve this problem, i made KJInputHandler
-# for this, you only need to import a head file, set a property 
-# for example, if i need to limit the input for a UITextView and it can only input chinese and english,Use the following
 
+实际项目中，我们经常碰到一些需要输入的地方，比如用户姓名、搜索、地址详情，用户反馈等，在这些场景中，我们一般都不允许输入表情和特殊字符的
+我们通常的做法是在每个包含这些输入的页面去实现UITextfiled或者UITextView的代理，在代理方法里面去限制，这样可以解决，但是比较麻烦，项目中输入的地方可能有多处，这样导致多个地方需要写这些实现代理的方法，所以为了解决这个蛋疼的问题，就写了KJInputHandler
+
+使用方法如下，比如我要给UITextView限制只能输入中文和英文，
 #import "UITextView+KJInputHandler.h"
 @property (weak, nonatomic) IBOutlet UITextView *testTextView;
 self.testTextView.inputRule = Input_Only_ChineseEnglish;
 
-# In the same way for UITextfiled
+限制UITextfiled
 #import "UITextField+KJInputHandler.h"
 @property (weak, nonatomic) IBOutlet UITextField *testTextFiled;
 self.testTextFiled.inputRule = Input_Only_ChineseEnglish;
 
-#also you can set the property inputMaxLength to limit their inputMaxLength
+限制用户输入最大长度
 self.testTextView.inputMaxLength = 10;
 
-#also when you want to listen the text change of them, you can set the textChangeBlock
+监听用户实时输入
 self.testTextView.textChangeBlock = ^(UITextView *textView){
         NSLog(@"texview -- %@",textView.text);
 };
